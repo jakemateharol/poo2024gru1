@@ -76,12 +76,13 @@
             <artifactId>miglayout</artifactId>
             <version>3.7.4</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.davidmp</groupId>
+            <artifactId>SysSwingDmp</artifactId>
+            <version>v1.9</version>
+        </dependency>
     </dependencies>
-    <dependency>
-        <groupId>com.github.davidmp</groupId>
-        <artifactId>SysSwingDmp</artifactId>
-        <version>v1.9</version>
-    </dependency>
+    
 
     <!--hjfkjdwhfjkwehjfkwhfjkwdhfhuwehfioweuifoeuwfiuwe-->
     <repositories>
