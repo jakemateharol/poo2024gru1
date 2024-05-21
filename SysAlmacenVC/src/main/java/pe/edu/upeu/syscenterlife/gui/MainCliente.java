@@ -57,12 +57,13 @@ public class MainCliente extends javax.swing.JPanel {
             jTable1.setAutoCreateRowSorter(true);
             modelo = (DefaultTableModel) jTable1.getModel();
             modelo.setNumRows(0);
-            Object[] ob = new Object[4];
+            Object[] ob = new Object[5];
             for (int i = 0; i < listarCleintes.size(); i++) {
                 ob[0] = i + 1;
                 ob[1] = listarCleintes.get(i).getDniruc();
                 ob[2] = listarCleintes.get(i).getNombrers();
                 ob[3] = listarCleintes.get(i).getDocumento();
+                ob[4] = listarCleintes.get(i).getDireccion();
                 modelo.addRow(ob);
             }
         }
@@ -306,7 +307,7 @@ public class MainCliente extends javax.swing.JPanel {
 
             },
             new String [] {
-                "#", "DNI/RUC", "Nombres", "Tipo Doc."
+                "#", "DNI/RUC", "Nombres", "T.doc", "Direccion"
             }
         ));
         jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
