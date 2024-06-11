@@ -34,7 +34,7 @@ import pe.edu.upeu.syscenterlife.util.MsgBox;
 import pe.edu.upeu.syscenterlife.util.UtilsX;
 
 /**
- *L
+ *
  * @author Datos
  */
 @Component
@@ -89,11 +89,14 @@ public class Login extends javax.swing.JFrame {
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                
                 Usuario u=usuarioService.loginUsuario(txtUsername.getText(),
                         new String(txtPassword.getPassword()));
+                
                 if (u!=null) {
                     SessionManager.getInstance().setUserId(u.getIdUsuario());
-                     SessionManager.getInstance().setUsuarioNombre(u.getUser());
+                    SessionManager.getInstance().setUsuarioNombre(u.getUser());
+                    
                     gUIMain.setContexto(ctx);
                     gUIMain.setVisible(true);
                     dispose();

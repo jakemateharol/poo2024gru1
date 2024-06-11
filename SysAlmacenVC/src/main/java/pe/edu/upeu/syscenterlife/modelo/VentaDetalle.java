@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package pe.edu.upeu.syscenterlife.modelo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -34,7 +38,6 @@ public class VentaDetalle {
     @Basic(optional = false)
     @Column(name = "subtotal")
     private double subtotal;
-
     @JoinColumn(name = "id_venta", referencedColumnName = "id_venta")
     @ManyToOne(optional = false)
     @JsonIgnoreProperties({"ventaDetalles"})

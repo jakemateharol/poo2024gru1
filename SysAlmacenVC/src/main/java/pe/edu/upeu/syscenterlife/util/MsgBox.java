@@ -6,7 +6,7 @@ import javax.swing.*;
  * Clase Principal para manejo de alertas
  *
  * @see <br>
- * El constructor resive 3 parametros(mensaje, tipo_de_alerta,
+ * El constructor resive 3 parametros (mensaje, tipo_de_alerta,
  * icono_personalizado)
  * <h1>El parámetro tipoDialog tiene las siguientes opciones: JOptionPane</h1>
  *
@@ -36,6 +36,7 @@ public class MsgBox {
     }
 
     public static void main(String[] args) {
-        MsgBox msgBox = new MsgBox("hola manito", JOptionPane.INFORMATION_MESSAGE, "img/secrecy-icon.png");
+        //MsgBox msgBox = new MsgBox("Mensaje", JOptionPane.ERROR_MESSAGE, "img/secrecy-icon.png");
+        MsgBox msgBox = new MsgBox("Hola manito", JOptionPane.INFORMATION_MESSAGE, "img/store.png");
     }
 }

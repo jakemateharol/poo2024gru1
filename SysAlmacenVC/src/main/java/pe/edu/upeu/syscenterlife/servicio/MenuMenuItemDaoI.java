@@ -7,8 +7,5 @@ import pe.edu.upeu.syscenterlife.modelo.MenuMenuItenTO;
 
 
 public interface MenuMenuItemDaoI {
-
     public List<MenuMenuItenTO> listaAccesos(String perfil, Properties idioma);
 }
-
-

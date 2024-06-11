@@ -38,6 +38,5 @@ public class UsuarioService {
     
     public Usuario loginUsuario(String user, String clave){
         return repository.loginUsuario(user, clave);
-    
     }
 }
