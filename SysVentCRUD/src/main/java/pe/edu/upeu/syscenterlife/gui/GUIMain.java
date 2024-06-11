@@ -1,7 +1,10 @@
+<<<<<<<< HEAD:SysVentCRUDX/src/main/java/pe/edu/upeu/syscenterlife/gui/GUIMain.java
+========
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+>>>>>>>> a0515a44086599a5861ef6607e88ca7269a2fc61:SysVentCRUD/src/main/java/pe/edu/upeu/syscenterlife/gui/GUIMain.java
 package pe.edu.upeu.syscenterlife.gui;
 
 import java.awt.BorderLayout;
@@ -25,7 +28,7 @@ public class GUIMain extends JFrame {
         this.setSize(new Dimension(screenSize.width, (screenSize.height)
                 - 36));
         MainCliente mc = new MainCliente();
-        //mc.setContexto(ctx);
+//mc.setContexto(ctx);
         mc.setPreferredSize(new Dimension(1024, 600));
         jtpane = new JTabbedPane();
         jtpane.setName("Cliente");

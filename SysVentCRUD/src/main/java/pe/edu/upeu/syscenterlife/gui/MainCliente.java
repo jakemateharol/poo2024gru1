@@ -56,10 +56,17 @@ public class MainCliente extends javax.swing.JPanel {
     }
 
     public void resetForm() {
+<<<<<<<< HEAD:SysVentCRUDX/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
+        txtDni.setText("");
+        txtNombre.setText("");
+        cbxTipo.setSelectedIndex(0);
+        txtDni.requestFocus();
+========
         txtdniruc.setText("");
         txtNombre.setText("");
         cbxTipo.setSelectedIndex(0);
         txtdniruc.requestFocus();
+>>>>>>>> a0515a44086599a5861ef6607e88ca7269a2fc61:SysVentCRUD/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
     }
 
     private void paintForm() {
@@ -69,6 +76,16 @@ public class MainCliente extends javax.swing.JPanel {
             Object valor = jTable1.getValueAt(rowx, 1);
             //ClienteTO filax = (ClienteTO) modelo.getRow(jTable1.getSelectedRow());
             Cliente d = clienteService.buscarCliente(valor.toString());
+<<<<<<<< HEAD:SysVentCRUDX/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
+            txtDni.setText(d.getDniruc());
+            txtNombre.setText(d.getNombre());
+            cbxTipo.setSelectedItem(d.getDocumento());
+            txtDni.setEditable(false);
+            btnRegistrar.setText("Modificar");
+            //guardarButton.setToolTipText("MODIFICAR");
+        } else {
+            txtDni.setEditable(true);
+========
             txtdniruc.setText(d.getDniruc());
             txtNombre.setText(d.getNombres());
             cbxTipo.setSelectedItem(d.getDocumento());
@@ -77,6 +94,7 @@ public class MainCliente extends javax.swing.JPanel {
             //guardarButton.setToolTipText("MODIFICAR");
         } else {
             txtdniruc.setEditable(true);
+>>>>>>>> a0515a44086599a5861ef6607e88ca7269a2fc61:SysVentCRUD/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
         }
     }
 
@@ -94,23 +112,164 @@ public class MainCliente extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         txtDatoBuscar = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
+<<<<<<<< HEAD:SysVentCRUDX/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
+        btnPdf = new javax.swing.JButton();
+        btnExcel = new javax.swing.JButton();
+========
         btnExcel = new javax.swing.JButton();
         btnPDF = new javax.swing.JButton();
+>>>>>>>> a0515a44086599a5861ef6607e88ca7269a2fc61:SysVentCRUD/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
         jPanel2 = new javax.swing.JPanel();
         btnNuevo = new javax.swing.JButton();
         btnRegistrar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+<<<<<<<< HEAD:SysVentCRUDX/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
+        txtDni = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        txtNombre = new javax.swing.JTextField();
+========
         jLabel3 = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
         txtdniruc = new javax.swing.JTextField();
+>>>>>>>> a0515a44086599a5861ef6607e88ca7269a2fc61:SysVentCRUD/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
         jLabel4 = new javax.swing.JLabel();
         cbxTipo = new javax.swing.JComboBox<>();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
+<<<<<<<< HEAD:SysVentCRUDX/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
+        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setText("GESTION DE CLIENTES");
+
+        jLabel5.setText("Buscar Dato Cliente");
+
+        txtBuscar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtBuscarKeyTyped(evt);
+            }
+        });
+
+        jLabel6.setText("Exportar");
+
+        btnPdf.setText("PDF");
+
+        btnExcel.setText("Excel");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel1)
+                .addGap(81, 81, 81)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addGap(40, 40, 40)
+                        .addComponent(jLabel6))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnPdf)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnExcel)))
+                .addContainerGap(46, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPdf)
+                    .addComponent(btnExcel))
+                .addContainerGap(27, Short.MAX_VALUE))
+        );
+
+        jPanel2.setBackground(new java.awt.Color(204, 255, 255));
+
+        btnNuevo.setText("Nuevo");
+        btnNuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNuevoActionPerformed(evt);
+            }
+        });
+
+        btnRegistrar.setText("Registrar");
+        btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistrarActionPerformed(evt);
+            }
+        });
+
+        btnEliminar.setText("Eliminar");
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnNuevo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnRegistrar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnEliminar)
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(8, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnNuevo)
+                    .addComponent(btnRegistrar)
+                    .addComponent(btnEliminar))
+                .addContainerGap())
+        );
+
+        jPanel3.setBackground(new java.awt.Color(255, 204, 204));
+
+        jLabel2.setText("DNI/RUC:");
+
+        jLabel3.setText("Nombre:");
+
+        jLabel4.setText("T.Doc:");
+
+        cbxTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione" }));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cbxTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtDni, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+========
         setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
@@ -217,8 +376,28 @@ public class MainCliente extends javax.swing.JPanel {
                     .addComponent(btnRegistrar)
                     .addComponent(btnEliminar)
                     .addComponent(btnNuevo))
+>>>>>>>> a0515a44086599a5861ef6607e88ca7269a2fc61:SysVentCRUD/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(13, 13, 13)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtDni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(cbxTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(165, Short.MAX_VALUE))
+        );
+
+        jPanel4.setBackground(new java.awt.Color(255, 255, 204));
 
         jPanel3.setBackground(new java.awt.Color(255, 204, 204));
         jPanel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -285,7 +464,11 @@ public class MainCliente extends javax.swing.JPanel {
 
             },
             new String [] {
+<<<<<<<< HEAD:SysVentCRUDX/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
+                "#", "DNI/RUC", "Nombres", "T.Doc"
+========
                 "#", "DNI/RUC", "Nombres", "Tipo Doc."
+>>>>>>>> a0515a44086599a5861ef6607e88ca7269a2fc61:SysVentCRUD/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
             }
         ));
         jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -306,14 +489,22 @@ public class MainCliente extends javax.swing.JPanel {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
+<<<<<<<< HEAD:SysVentCRUDX/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+========
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1005, Short.MAX_VALUE)
+>>>>>>>> a0515a44086599a5861ef6607e88ca7269a2fc61:SysVentCRUD/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
+<<<<<<<< HEAD:SysVentCRUDX/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+========
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 527, Short.MAX_VALUE)
+>>>>>>>> a0515a44086599a5861ef6607e88ca7269a2fc61:SysVentCRUD/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
                 .addContainerGap())
         );
 
@@ -322,10 +513,17 @@ public class MainCliente extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<<< HEAD:SysVentCRUDX/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+========
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
+>>>>>>>> a0515a44086599a5861ef6607e88ca7269a2fc61:SysVentCRUD/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -336,6 +534,10 @@ public class MainCliente extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<<< HEAD:SysVentCRUDX/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
+                .addContainerGap()
+========
+>>>>>>>> a0515a44086599a5861ef6607e88ca7269a2fc61:SysVentCRUD/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -351,8 +553,13 @@ public class MainCliente extends javax.swing.JPanel {
     private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
         resetForm();
         btnRegistrar.setText("Registrar");
+<<<<<<<< HEAD:SysVentCRUDX/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
+        txtDni.setEditable(true);
+        jTable1.getSelectionModel().clearSelection();
+========
         txtdniruc.setEditable(true);
         jTable1.getSelectionModel().clearSelection();        // TODO add your handling code here:
+>>>>>>>> a0515a44086599a5861ef6607e88ca7269a2fc61:SysVentCRUD/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
     }//GEN-LAST:event_btnNuevoActionPerformed
 
     private void cbxTipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxTipoActionPerformed
@@ -369,9 +576,15 @@ public class MainCliente extends javax.swing.JPanel {
                 modelo = (DefaultTableModel) jTable1.getModel();
                 int rowx = jTable1.getSelectedRow();
                 Object valor = jTable1.getValueAt(rowx, 1);
+<<<<<<<< HEAD:SysVentCRUDX/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
+                if (JOptionPane.showConfirmDialog(this, "Esta seguro de eliminar este registrtro DNI: " + valor + "?",
+                        "Mensaje de confirmación", JOptionPane.OK_CANCEL_OPTION,
+                        JOptionPane.INFORMATION_MESSAGE) == 0) {
+========
 
                 if (JOptionPane.showConfirmDialog(this,
                         "Esta seguro de eliminar este registrtro DNI:" + valor + " ? ", "  Mensaje de confirmación", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE) == 0) {
+>>>>>>>> a0515a44086599a5861ef6607e88ca7269a2fc61:SysVentCRUD/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
                     modelo.removeRow(rowx);
                     clienteService.deleteRegistEntdad(valor.toString());
                     resetForm();
@@ -382,13 +595,21 @@ public class MainCliente extends javax.swing.JPanel {
         } else {
             JOptionPane.showMessageDialog(this, "Seleccione un item");
         }
+<<<<<<<< HEAD:SysVentCRUDX/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
+========
         // TODO add your handling code here:
+>>>>>>>> a0515a44086599a5861ef6607e88ca7269a2fc61:SysVentCRUD/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
         Cliente to = new Cliente();
+<<<<<<<< HEAD:SysVentCRUDX/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
+        to.setDniruc(txtDni.getText());
+        to.setNombre(txtNombre.getText());
+========
         to.setDniruc(txtdniruc.getText());
         to.setNombres(txtNombre.getText());
+>>>>>>>> a0515a44086599a5861ef6607e88ca7269a2fc61:SysVentCRUD/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
         to.setDocumento(cbxTipo.getSelectedItem() == null ? ""
                 : cbxTipo.getSelectedItem().toString());
         int fila = jTable1.getSelectedRow();
@@ -409,23 +630,30 @@ public class MainCliente extends javax.swing.JPanel {
             }
         } else {
             try {
+<<<<<<<< HEAD:SysVentCRUDX/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
+                if (JOptionPane.showConfirmDialog(this, "Esta seguro de crear un nuevo cliente?", "Mensaje de confirmación", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE) == 0) {
+========
 
                 if (JOptionPane.showConfirmDialog(this, "Esta seguro de crear un nuevo cliente?", "Mensaje de confirmación", JOptionPane.OK_CANCEL_OPTION,
                         JOptionPane.INFORMATION_MESSAGE
                 ) == 0) {
+>>>>>>>> a0515a44086599a5861ef6607e88ca7269a2fc61:SysVentCRUD/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
                     if (clienteService.saveEntidad(to) != false) {
                         modelo = (DefaultTableModel) jTable1.getModel();
                         Object nuevo[] = {modelo.getRowCount() + 1, to.getDniruc(),
                             to.getNombres(), to.getDocumento()};
                         modelo.addRow(nuevo);
                         resetForm();
-
                     }
                 }
             } catch (Exception e) {
+<<<<<<<< HEAD:SysVentCRUDX/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
+//JOptionPane.showMessageDialog(this, e.getMessage());
+========
                 //JOptionPane.showMessageDialog(this, e.getMessage());
+>>>>>>>> a0515a44086599a5861ef6607e88ca7269a2fc61:SysVentCRUD/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
                 System.err.println("Crear Cliente");
-                //log.log(Level.SEVERE, "Crear Cliente", e);
+//log.log(Level.SEVERE, "Crear Cliente", e);
             }
         }        // TODO add your handling code here:
     }//GEN-LAST:event_btnRegistrarActionPerformed
@@ -442,8 +670,12 @@ public class MainCliente extends javax.swing.JPanel {
                 System.out.println("v:" + cadena);
                 txtDatoBuscar.setText(cadena);
                 repaint();
+<<<<<<<< HEAD:SysVentCRUDX/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
+                trsfiltro.setRowFilter(RowFilter.regexFilter(txtBuscar.getText())
+========
 
                 trsfiltro.setRowFilter(RowFilter.regexFilter(txtDatoBuscar.getText())
+>>>>>>>> a0515a44086599a5861ef6607e88ca7269a2fc61:SysVentCRUD/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
                 );
             }
         });
@@ -472,8 +704,14 @@ public class MainCliente extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+<<<<<<<< HEAD:SysVentCRUDX/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
+    private javax.swing.JTextField txtBuscar;
+    private javax.swing.JTextField txtDni;
+    private javax.swing.JTextField txtNombre;
+========
     private javax.swing.JTextField txtDatoBuscar;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtdniruc;
+>>>>>>>> a0515a44086599a5861ef6607e88ca7269a2fc61:SysVentCRUD/src/main/java/pe/edu/upeu/syscenterlife/gui/MainCliente.java
     // End of variables declaration//GEN-END:variables
 }
